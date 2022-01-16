@@ -7,9 +7,6 @@
 
 ## Installation
 
-Öncelikle Faker kütüphanesini indirin.
-Ardından projeyi klonlayın.
-
 ```bash
  pip install Faker
  git clone https://github.com/TURKZEN/FakePersonGenerator.git
@@ -18,16 +15,11 @@ Ardından projeyi klonlayın.
 
 ## Usage
 
-Projeyi cloneladıktan sonra Visual Studio Code programında açınız.
-
-Linux için:
+For Linux:
 ```linux
 cd FakePersonGenerator
 python fakepersongenerator.py
 ```
-
-## Contributing
-Pull requestler kabul edilir. Büyük değişiklikler için, lütfen önce neyi değiştirmek istediğinizi tartışmak için bir konu açınız.
 
 
 ## License
