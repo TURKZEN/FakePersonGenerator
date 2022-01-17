@@ -1,6 +1,17 @@
 import os
 os.system('cls' if os.name=='nt' else 'clear')
-from faker import Faker
+try:
+    from faker import Faker
+except:
+    print("""
+    
+    Faker kütüphanesi yüklü değil.Lütfen önce kütüphaneyi yükleyin.
+    Faker library is not installed. Please install the library first.
+
+        pip install Faker
+    
+    """)
+    quit()
 print(
 """
   ______    _        _____                           _____                           _             
