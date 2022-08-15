@@ -22,6 +22,11 @@ except:
     yuklensin_mi = input("Faker Kütüphanesi otomatik yüklensin mi ? (e/h) : ")
     if yuklensin_mi == "e":
         os.system("pip install Faker")
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("Faker kütüphanesi yüklendi script başlatılıyor...")
+        print("Faker library loaded, starting script...")
+        time.sleep(3)
+        os.system('cls' if os.name == 'nt' else 'clear')
     else:
         print("""
             Faker kütüphanesi yüklü değil.Lütfen önce kütüphaneyi yükleyin.
