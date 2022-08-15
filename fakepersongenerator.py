@@ -1,4 +1,12 @@
 import os
+
+if __name__ == "__main__":
+    pass
+else:
+    print("İmport edilemez")
+    print("cannot be imported.")
+    quit()
+
 os.system('cls' if os.name=='nt' else 'clear')
 try:
     from faker import Faker
@@ -11,7 +19,18 @@ except:
         pip install Faker
     
     """)
-    quit()
+    yuklensin_mi = input("Faker Kütüphanesi otomatik yüklensin mi ? (e/h) : ")
+    if yuklensin_mi == "e":
+        os.system("pip install Faker")
+    else:
+        print("""
+            Faker kütüphanesi yüklü değil.Lütfen önce kütüphaneyi yükleyin.
+            Faker library is not installed. Please install the library first.
+
+                pip install Faker
+        """)
+        quit()
+
 print(
 """
   ______    _        _____                           _____                           _             
