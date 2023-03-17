@@ -12,7 +12,7 @@
 </p>
 
 ### [+] Description
-
+The reason for making the Fake Person Generator is to provide data security by providing fake information on website forms, as well as to facilitate the work of penetration testers.
 
 ### [+] Installation
  - `git clone https://github.com/TURKZEN/FakePersonGenerator.git`
