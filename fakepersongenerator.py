@@ -1,35 +1,11 @@
+# /usr/bin/python
 from faker import Faker
+from faker.providers import internet
 from time import sleep
 from os import name,system
 
-
 def menu():
-    print("""
-    
-    Sahte bilgiler hangi dilde oluşturulsun ?
-
-    [1] İngilizce
-    [2] Türkçe
-
-    [99] Çıkış
-    
-    """)
-    
-    lang = input("Seçiminiz : ")
-    
-    if lang == "1":
-        EN()
-    elif lang == "2":
-        TR()
-    elif lang == "99":
-        Exit()
-    else:
-        print("Lütfen doğru bir seçim yapınız !")
-        sleep(2)
-        clean()
-        Main()
-
-def menu2():
+    fake = Faker(['en_US'])
     print("""
     
     Ne oluşturulsun ?
@@ -37,6 +13,7 @@ def menu2():
     [1] Sahte İsim
     [2] Sahte Adres
     [3] Sahte Yazı
+    [4] Sahte IP Adresi
 
     [99] Çıkış
     
@@ -98,11 +75,40 @@ Sahte Adres Oluşturuldu !
     elif choose == "3":
         space()
         print("""
-Sahte Adres Oluşturuldu !
+Sahte Yazı Oluşturuldu !
 {}
 {}
 {}
         """.format("-"*50,fake.text(),"-"*50))
+
+        
+        Continue = input("Devam etmek istiyormusunuz ? (e/h) : ")
+
+        if Continue == "e" or Continue == "E":
+            menu()
+        elif Continue == "h" or Continue == "H":
+            Exit()
+        else:
+            print("""
+            Lütfen doğru bir seçim yapınız !
+            
+            (e/h) ---> evet / hayır
+            
+             """)
+            sleep(3)
+            Exit()
+    
+    elif choose == "4":
+        fake = Faker()
+        fake.add_provider(internet)
+        space()
+
+        print("""
+Sahte IP Adresi oluşturuldu !
+{}
+{}
+{}
+        """.format("-"*50,fake.ipv4_private(),"-"*50))
 
         
         Continue = input("Devam etmek istiyormusunuz ? (e/h) : ")
@@ -130,15 +136,7 @@ Sahte Adres Oluşturuldu !
         sleep(2)
         clean()
         Main()
-def EN():
-    global fake
-    fake = Faker(['en_US'])
-    menu2()
 
-def TR():
-    global fake
-    fake = Faker(['tr_TR'])
-    menu2()
 
 def banner():
     clean()
@@ -179,5 +177,10 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         Exit()
     except EOFError:
+        Exit()
+    except:
+        space()
+        print("Bilinmeyen Hata !")
+        sleep(1)
         Exit()
     
