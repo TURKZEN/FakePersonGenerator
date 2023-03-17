@@ -29,4 +29,4 @@ The reason for making the Fake Person Generator is to provide data security by p
 ### [+] Find me on 
 <a href="mailto:batuhanthd@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Email-batuhanthd@gmail.com-blue?style=for-the-badge&logo=gmail"></a>
 
-[![asciicast](https://asciinema.org/a/ec9C11vJXfV8p556ByDJeU7Ss.svg)](https://asciinema.org/a/ec9C11vJXfV8p556ByDJeU7Ss)
+[![asciicast](https://asciinema.org/a/PpwHk2IIut9IyYF25efAeYMkY.svg)](https://asciinema.org/a/PpwHk2IIut9IyYF25efAeYMkY)
