@@ -36,7 +36,8 @@ def menu2():
 
     [1] Sahte İsim
     [2] Sahte Adres
-    
+    [3] Sahte Yazı
+
     [99] Çıkış
     
     """)
@@ -93,6 +94,33 @@ Sahte Adres Oluşturuldu !
              """)
             sleep(3)
             Exit()
+    
+    elif choose == "3":
+        space()
+        print("""
+Sahte Adres Oluşturuldu !
+{}
+{}
+{}
+        """.format("-"*50,fake.text(),"-"*50))
+
+        
+        Continue = input("Devam etmek istiyormusunuz ? (e/h) : ")
+
+        if Continue == "e" or Continue == "E":
+            menu()
+        elif Continue == "h" or Continue == "H":
+            Exit()
+        else:
+            print("""
+            Lütfen doğru bir seçim yapınız !
+            
+            (e/h) ---> evet / hayır
+            
+             """)
+            sleep(3)
+            Exit()
+        
     
     elif choose == "99":
         Exit()
